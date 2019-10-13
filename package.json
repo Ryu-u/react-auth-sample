@@ -3,20 +3,53 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.1",
+    "@types/express-session": "^1.15.14",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
+    "@types/passport": "^1.0.1",
+    "@types/passport-twitter": "^1.0.34",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/react-redux": "^7.1.2",
+    "@types/react-router": "^5.0.3",
+    "@types/react-router-dom": "^4.3.5",
+    "@types/redux": "^3.6.0",
+    "axios": "^0.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "nodemon": "^1.19.2",
+    "passport": "^0.4.0",
+    "passport-twitter": "^1.0.4",
+    "pug": "^2.0.4",
     "react": "^16.9.0",
+    "react-cookie": "^4.0.1",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "typescript": "3.6.2"
+    "react-redux": "^7.1.1",
+    "react-router": "5.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.2",
+    "redux": "^4.0.4",
+    "ts-node": "^8.3.0",
+    "typescript": "3.6.2",
+    "use-react-router": "^1.0.7"
   },
+  "engines": {
+    "yarn": "1.x"
+  },
+  "proxy": "http://127.0.0.1:5000",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn run ts-node --project tsconfig.backend.json backend/index.ts",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "frontend-start": "react-scripts start",
+    "backend-start": "nodemon",
+    "heroku-postbuild": "yarn && yarn run build "
   },
   "eslintConfig": {
     "extends": "react-app"

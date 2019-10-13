@@ -1,0 +1,11 @@
+html
+  head
+    title success
+  body
+    div#data(data-user=`${JSON.stringify(user)}`) ${user}
+    script.
+        document.body.onload = function() {
+          var passedUser = document.getElementById('data').getAttribute("data-user")
+          window.opener.postMessage(passedUser, '#{targetOrigin}');
+        };
+

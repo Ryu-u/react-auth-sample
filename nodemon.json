@@ -1,0 +1,5 @@
+{
+  "watch": ["backend"],
+  "ext": "ts",
+  "exec": "yarn run ts-node --project tsconfig.backend.json -r dotenv/config backend/index.ts"
+}
